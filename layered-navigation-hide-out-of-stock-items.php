@@ -1,5 +1,7 @@
 <?php
-/* Función para comprobar si los productos listados, con el filtro pa_size tienen stock para la variación indicada */
+/* layered navigation hide out of stock items
+** Función para comprobar si los productos listados, con el filtro pa_size tienen stock para la variación indicada 
+*/
 function product_in_stock($post, $product) {
 
     if ($_GET['filtering'] == 1 && $_GET['filter_size'] > 0 ) {
@@ -26,6 +28,7 @@ function product_in_stock($post, $product) {
         return true;
     }
 }
+
 // Funciones para crear un div in/out of stock alrededor del producto
 function check_if_out_of_stock(){
     global $post,$product;
